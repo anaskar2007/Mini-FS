@@ -1,0 +1,206 @@
+.shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
+  min-height: 100dvh;
+}
+
+.promo {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  padding: 24px;
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.brand { flex: none; font-family: var(--font-geist-sans), sans-serif; }
+
+.promoContent {
+  min-width: 0;
+  min-height: 0;
+  padding-block: 28px;
+}
+
+.eyebrow {
+  margin-bottom: 16px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+}
+
+.headline {
+  max-width: none;
+  color: #f0f0f2;
+  font-size: clamp(3.5rem, 4vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1.06;
+}
+
+.promoDescription {
+  max-width: 38rem;
+  margin-top: 12px;
+  color: #a3a3ad;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.methods {
+  margin-top: 16px;
+  gap: 20px;
+  padding-top: 16px;
+}
+
+.methodName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e1e1e5;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.methodDescription {
+  margin-top: 6px;
+  color: #888891;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.disk {
+  margin-top: clamp(16px, 2vh, 22px);
+  background: transparent;
+  padding: 4px 0 0;
+}
+
+.authPanel {
+  min-width: 0;
+  min-height: 0;
+  padding: 40px 24px;
+}
+
+.formFrame {
+  min-width: 0;
+}
+
+.security { margin-top: 24px; color: #85858f; font-size: 11px; }
+
+.authHeader { margin-bottom: 28px; }
+.authEyebrow {
+  color: #9289ff;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+}
+.authTitle {
+  margin-top: 10px;
+  color: #f0f0f2;
+  font-size: clamp(1.75rem, 2.2vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+.authDescription {
+  margin-top: 9px;
+  color: #a1a1aa;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.authForm { display: grid; gap: 20px; }
+.authField { display: grid; gap: 9px; }
+.authLabel { color: #dedee2; font-size: 13px; font-weight: 500; letter-spacing: -0.01em; }
+.authInput {
+  height: 44px;
+  border-color: #343438;
+  border-radius: 8px;
+  background: #19191b;
+  font-size: 14px;
+}
+.authInput:-webkit-autofill,
+.authInput:-webkit-autofill:hover,
+.authInput:-webkit-autofill:focus {
+  -webkit-text-fill-color: #e4e4e7;
+  -webkit-box-shadow: 0 0 0 1000px #19191b inset;
+  caret-color: #e4e4e7;
+}
+.authAction {
+  height: 44px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 550;
+  box-shadow: none;
+}
+.authFooter {
+  margin-top: 24px;
+  border-top: 1px solid #2b2b2e;
+  padding-top: 20px;
+  color: #9999a2;
+  font-size: 13px;
+}
+@media (min-width: 640px) {
+  .promo { padding: 28px 40px; }
+  .authPanel { padding-inline: 40px; }
+}
+
+@media (min-width: 1024px) {
+  .shell {
+    grid-template-columns: minmax(0, 62fr) minmax(0, 38fr);
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .promo {
+    height: 100dvh;
+    padding: clamp(20px, 3.2vh, 38px) clamp(28px, 4vw, 72px);
+    overflow-y: auto;
+  }
+
+  .promoContent {
+    padding-block: clamp(8px, 1.8vh, 18px);
+  }
+
+  .disk { margin-top: clamp(12px, 1.5vh, 16px); }
+
+  .authPanel {
+    height: 100dvh;
+    padding: clamp(18px, 3vh, 36px) clamp(24px, 3vw, 52px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .formFrame { max-width: 430px; }
+  .security { margin-top: 24px; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .promoContent { max-width: 760px; }
+  .headline { font-size: clamp(2.2rem, 5vw, 3rem); }
+  .authPanel { padding-block: 48px; }
+}
+
+@media (min-width: 1024px) and (max-height: 800px) {
+  .promo { padding-block: 16px; }
+  .promoContent { padding-block: 4px; }
+  .eyebrow { margin-bottom: 8px; }
+  .headline { font-size: clamp(3.5rem, 4vw, 3.75rem); }
+  .promoDescription { margin-top: 8px; }
+  .disk { margin-top: 10px; padding-top: 2px; }
+  .disk > div:first-child { margin-bottom: 8px; }
+  .disk > div:last-of-type { margin-top: 8px; padding-top: 4px; }
+  .methods { margin-top: 10px; padding-top: 10px; gap: 12px; }
+  .security { margin-top: 16px; }
+}
+
+@media (max-width: 639px) {
+  .promo { padding: 20px 22px; }
+  .promoContent { padding-block: 28px; }
+  .headline { font-size: clamp(2.1rem, 9vw, 3.25rem); }
+  .promoDescription { font-size: 15px; }
+  .disk { margin-top: 14px; }
+  .authPanel { padding: 36px 22px; }
+}

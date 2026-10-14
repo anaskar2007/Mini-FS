@@ -74,9 +74,9 @@ export default function AboutPage() {
           <CardContent className="text-sm text-muted-foreground">
             <ul className="space-y-2.5">
               {[
-                { name: "Aarush", roll: "RA251102802006" },
-                { name: "Pritam", roll: "RA2511028020007" },
-                { name: "Harsh", roll: "RA2511028020040" },
+                { name: "Aarush Naskar", roll: "RA2511028020006" },
+                { name: "Pritam Saha", roll: "RA2511028020007" },
+                { name: "Harsh Prakash", roll: "RA2511028020040" },
               ].map(({ name, roll }) => (
                 <li key={roll} className="flex items-center justify-between gap-4">
                   <span className="font-medium text-foreground">{name}</span>
